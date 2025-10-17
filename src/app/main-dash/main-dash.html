@@ -1,0 +1,194 @@
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <h2>💰 Financial Solutions</h2>
+    </div>
+    <div class="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#profile">Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <!-- Left Side: Text -->
+      <div class="hero-text">
+        <h1 class="hero-title">Financial Solutions for Everyone By Satish Kumar</h1>
+        <p class="hero-subtitle">
+          Complete range of professional and financial services under one roof with expert guidance.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Our Services</a>
+          <a href="#contact" class="btn btn-secondary">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Right Side: Portfolio Image -->
+      <div class="hero-image" aria-hidden="true">
+        <!-- Use relative path without leading slash for Angular assets -->
+        <img src="assets/images/clientImg.jpg" alt="Portfolio Photo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <div class="about-image" aria-hidden="true">🏦</div>
+    <div class="about-text">
+      <h3>Empowering Financial Growth</h3>
+      <p>We provide end-to-end financial management solutions — from tax planning to company incorporation and international compliance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card" *ngFor="let service of services">
+      <div class="service-icon">{{ service.icon }}</div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="profile" class="team">
+  <h2>Our Team</h2>
+  <div class="team-grid">
+    <div class="profile-card" *ngFor="let member of teamMembers">
+      <div class="profile-icon">{{ member.icon }}</div>
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.role }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key Offerings Section -->
+<section class="key-offerings">
+  <h2>Key Offerings</h2>
+  <div class="offerings-grid">
+    <div class="offering-category">
+      <h3>Investment & Advisory</h3>
+      <ul>
+        <li>Mutual Fund Advisory Services</li>
+        <li>Tax Planning & Advisory</li>
+        <li>Net Worth Certification</li>
+      </ul>
+    </div>
+    <div class="offering-category">
+      <h3>Business Services</h3>
+      <ul>
+        <li>Company Incorporation</li>
+        <li>Company Secretary Services</li>
+        <li>SEZ Compliance</li>
+      </ul>
+    </div>
+    <div class="offering-category">
+      <h3>Tax & Compliance</h3>
+      <ul>
+        <li>Income Tax Return Filings</li>
+        <li>GST Return Filings</li>
+        <li>Form 15CA / 15CB Certification</li>
+      </ul>
+    </div>
+    <div class="offering-category">
+      <h3>International Services</h3>
+      <ul>
+        <li>Import & Export Registration</li>
+        <li>US Tax Return Filings</li>
+        <li>Dubai Compliance Services</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-content">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div class="contact-details">
+          <h4>Email</h4>
+          <p><a href="mailto:saccsatish@gmail.com">saccsatish@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌍</div>
+        <div class="contact-details">
+          <h4>Coverage</h4>
+          <p>India, Dubai, Saudi Arabia, Africa, US</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Get In Touch</h3>
+     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required />
+  <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required />
+  
+  <select name="service" [(ngModel)]="formData.service" required>
+    <option value="">Select Service</option>
+    <option value="mutual-funds">Mutual Fund Advisory</option>
+    <option value="incorporation">Company Incorporation</option>
+    <option value="tax-filing">Tax Filing</option>
+    <option value="gst">GST Services</option>
+    <option value="compliance">Compliance Services</option>
+  </select>
+
+  <textarea name="message" [(ngModel)]="formData.message" placeholder="Your Message" rows="5" required></textarea>
+  
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>💰 Financial Solutions</h3>
+      <p>Expert guidance with standardized pricing worldwide.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>Mutual Fund Advisory</li>
+        <li>Tax Filing</li>
+        <li>Company Incorporation</li>
+        <li>Compliance</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>info@financialsolutions.com</p>
+      <p>🌍 Global Coverage</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="https://www.incometax.gov.in/iec/foportal/">Income Tax Department</a></li>
+        <li><a href="https://www.mca.gov.in/content/mca/global/en/home.html">Ministry of Corporate Affairs</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Financial Solutions. All rights reserved.</p>
+  </div>
+</footer>
