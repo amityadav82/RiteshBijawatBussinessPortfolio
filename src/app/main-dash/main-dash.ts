@@ -17,21 +17,20 @@ export class MainDash {
   toastMessage = '';
 
   services = [
-    { icon: '🇺🇸', title: 'US Tax Return Filings', description: 'Filing and advisory for NRIs and US residents.' },
-     { icon: '📚', title: 'Accounting & Book Keeping Services', description: 'Comprehensive accounting and bookkeeping solutions for businesses.' },
+    { icon: '💰', title: 'Mutual Fund Advisory Services', description: 'Personalized investment advice tailored to your financial goals.' },
     { icon: '💳', title: 'Corporate Credit Card Services', description: 'Simplified corporate credit management and expense tracking.' },
-    { icon: '🧮', title: 'Virtual CFO', description: 'End-to-end financial strategy, planning, and advisory support for growing businesses.' },
-   { icon: '💰', title: 'Mutual Fund Advisory Services', description: 'Personalized investment advice tailored to your financial goals.' },
     { icon: '🏢', title: 'Company Incorporation', description: 'Business setup in India and abroad (Dubai, Saudi Arabia, Africa, etc.).' },
-    { icon: '📊', title: 'Income Tax Return Filings', description: 'Hassle-free preparation and filing for individuals and businesses.' },
-    { icon: '📋', title: 'GST Return Filings', description: 'Timely and accurate GST compliance and advisory.' },
-    { icon: '✅', title: 'Form 15CA / 15CB Certification', description: 'End-to-end assistance for foreign remittance compliance.' },
-    { icon: '📈', title: 'Tax Planning & Advisory', description: 'Strategic tax-saving solutions and compliance planning.' },
-    { icon: '📜', title: 'Net Worth Certification', description: 'Certified statements for visa, bank, or business requirements.' },
     { icon: '🌍', title: 'Import & Export Registration', description: 'IEC registration and compliance support for global trade.' },
+    { icon: '📈', title: 'Tax Planning & Advisory', description: 'Strategic tax-saving solutions and compliance planning.' },
+    { icon: '📊', title: 'Income Tax Return Filings', description: 'Hassle-free preparation and filing for individuals and businesses.' },
+     { icon: '📋', title: 'GST Return Filings', description: 'Timely and accurate GST compliance and advisory.' },
+     { icon: '🇺🇸', title: 'US & UK Tax Return Filings', description: 'Filing and advisory for NRIs and US residents.' },
+     { icon: '✅', title: 'Form 15CA / 15CB Certification', description: 'End-to-end assistance for foreign remittance compliance.' },
+     { icon: '📜', title: 'Net Worth Certification', description: 'Certified statements for visa, bank, or business requirements.' },
+     { icon: '🇦🇪', title: 'Dubai Compliance Services', description: 'Accounting, VAT, and corporate compliance solutions.' },
+     { icon: '📚', title: 'Accounting & Book Keeping Services', description: 'Comprehensive accounting and bookkeeping solutions for businesses.' },
+    { icon: '🧮', title: 'Virtual CFO', description: 'End-to-end financial strategy, planning, and advisory support for growing businesses.' },
     { icon: '🏭', title: 'SEZ Compliance', description: 'Assistance with documentation, filings, and approvals for SEZ units.' },
-    
-    { icon: '🇦🇪', title: 'Dubai Compliance Services', description: 'Accounting, VAT, and corporate compliance solutions.' },
     { icon: '⚖️', title: 'Company Secretary Services', description: 'Drafting of legal documents, board minutes, and statutory filings.' },
   ];
 
@@ -53,9 +52,9 @@ export class MainDash {
   };
 
   onSubmit() {
-    const serviceID = 'service_zib3ubl';
-    const templateID = 'template_7qo8oqk';
-    const publicKey = 'iHAnCzmTVcnpoJ4cb';
+    const serviceID = 'service_jfi9fkr';
+    const templateID = 'template_tlhikub';
+    const publicKey = '6cE5N-jKNWK0ZVbXq';
 
    
     emailjs.send(serviceID, templateID, this.formData, publicKey)
