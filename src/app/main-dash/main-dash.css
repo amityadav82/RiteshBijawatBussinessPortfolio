@@ -472,3 +472,16 @@ section h2::after {
     min-width: 100%;
   }
 }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;  /* Space between image and text */
+}
+
+.LogoImg img {
+  height: 50px;      /* Adjust according to your design */
+  width: 50px;       /* Make it square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover;  /* Ensure the image covers the container */
+}
